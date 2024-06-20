@@ -1,0 +1,15 @@
+build/
+.cache/
+compile_commands.json
+
+.env*
+
+*.DS_Store
+
+.idea/
+.vscode/
+
+*.clangd
+*.clangd*
+
+.gdbinit

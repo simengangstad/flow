@@ -1,0 +1,6 @@
+#ifndef CONF_HW_TIMER_H_INCLUDED
+#define CONF_HW_TIMER_H_INCLUDED
+
+#define TIMER (&TCC0)
+
+#endif /* CONF_HW_TIMER_H_INCLUDED */
