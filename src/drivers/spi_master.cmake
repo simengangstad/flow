@@ -16,7 +16,8 @@ if(${MCU_FAMILY} STREQUAL "XMEGA")
 elseif(${MCU_FAMILY} STREQUAL "MEGA")
 
   target_sources(
-    ${TARGET} PUBLIC ${CMAKE_CURRENT_LIST_DIR}/spi/master/mega_spi/spi_master.c)
+    ${TARGET}
+    PUBLIC ${CMAKE_CURRENT_LIST_DIR}/spi/master/megarf_spi/spi_master.c)
 
 else()
 
