@@ -45,12 +45,12 @@ This makes it possible to construct a chain on the following way:
 
 ### Supported boards
 
-| Board                      |                              Image                                                                |
-|----------------------------|---------------------------------------------------------------------------------------------------|
-| ATmega256RFR2 Xplained Pro | <img src="./images/atmega256rfr2_xplained_pro.jpg" alt="ATmega256RFR2 Xplained Pro" width="300"/> |
-| ATZB-X-233-USB             | <img src="./images/atzb_x_233_usb.jpg" alt="ATZB-X-233-USB" width="300"/>                         |
-| ATZB-X-233-XPRO            | <img src="./images/atzb_x_233_xpro.jpg" alt="ATZB-X-233-XPRO" width="300"/>                       |
-| ATZB-256RFR2-XPRO          | <img src="./images/atzb_256rfr2_xpro.jpg" alt="ATZB-256RFR2-XPRO" width="300"/>                   |
+| Board                      |    MCU        |                              Image                                                                |
+|----------------------------|---------------|---------------------------------------------------------------------------------------------------|
+| ATmega256RFR2 Xplained Pro | ATmega256RFR2 | <img src="./images/atmega256rfr2_xplained_pro.jpg" alt="ATmega256RFR2 Xplained Pro" width="200"/> |
+| ATZB-X-233-USB             | ATxmega256A3U | <img src="./images/atzb_x_233_usb.jpg" alt="ATZB-X-233-USB" width="200"/>                         |
+| ATZB-X-233-XPRO            | ATxmega256A3U | <img src="./images/atzb_x_233_xpro.jpg" alt="ATZB-X-233-XPRO" width="200"/>                       |
+| ATZB-256RFR2-XPRO          | ATmega256RFR2 | <img src="./images/atzb_256rfr2_xpro.jpg" alt="ATZB-256RFR2-XPRO" width="200"/>                   |
 
 ### Repository Structure
 
