@@ -183,10 +183,22 @@ add_custom_target(
   DEPENDS ${TARGET}
   COMMENT "Creating ${TARGET}.hex")
 
-# EEPROM add_custom_target( eeprom ALL ${CMAKE_OBJCOPY} -j .eeprom
-# --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0
-# --no-change-warnings -O ihex ${TARGET}.elf ${TARGET}-eeprom.hex DEPENDS
-# ${TARGET} COMMENT "Creating ${TARGET}-eeprom.hex")
+# EEPROM
+add_custom_target(
+  eeprom ALL
+  ${CMAKE_OBJCOPY}
+  -j
+  .eeprom
+  --set-section-flags=.eeprom=alloc,load
+  --change-section-lma
+  .eeprom=0
+  --no-change-warnings
+  -O
+  ihex
+  ${TARGET}.elf
+  ${TARGET}-eeprom.hex
+  DEPENDS ${TARGET}
+  COMMENT "Creating ${TARGET}-eeprom.hex")
 
 if(TOOLCHAIN_USE_PYMCUPROG)
 
@@ -209,7 +221,7 @@ elseif(TOOLCHAIN_USE_DFU_PROGRAMMER)
 
   add_custom_target(
     flash
-    ${PROGRAMMER} ${PROGRAMMER_MCU} flash ${TARGET}.hex --erase-first
+    ${PROGRAMMER} ${PROGRAMMER_MCU} flash ${TARGET}.hex --force --ignore-outside
     DEPENDS hex
     COMMENT "Flashing ${TARGET}.hex to ${MCU}")
 

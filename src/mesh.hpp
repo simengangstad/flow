@@ -159,7 +159,7 @@ namespace mesh {
      */
     enum class EnqueumentStatus { Ok, TransmissionBufferFull };
 
-    constexpr uint8_t MAX_TRANSMISSION_PACKET_SIZE = 64;
+    constexpr uint8_t MAX_TRANSMISSION_PACKET_SIZE = 196;
 
     using Payload = etl::vector<uint8_t, mesh::MAX_TRANSMISSION_PACKET_SIZE>;
 
