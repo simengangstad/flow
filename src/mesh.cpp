@@ -6,6 +6,7 @@
 #include "phy.h"
 #include "sys.h"
 
+#include <progmem.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -35,14 +36,14 @@ namespace mesh {
     void initialise(const Configuration& configuration) {
 
 #ifdef MESH_ENABLE_LOGGING
-        printf("\r\n\r\n");
-        printf("Initializing mesh stack\r\n");
-        printf("- Device address: 0x%X\r\n", configuration.address);
-        printf("- Device name: %s\r\n", configuration.device_name);
-        printf("- PAN ID: 0x%X\r\n",
-               configuration.personal_area_network_identifier);
-        printf("- Channel: 0x%X\r\n", configuration.channel);
-        printf("\r\n\r\n");
+        printf_P(PSTR("\r\n\r\n"));
+        printf_P(PSTR("Initializing mesh stack\r\n"));
+        printf_P(PSTR("- Device address: 0x%X\r\n"), configuration.address);
+        printf_P(PSTR("- Device name: %s\r\n"), configuration.device_name);
+        printf_P(PSTR("- PAN ID: 0x%X\r\n"),
+                 configuration.personal_area_network_identifier);
+        printf_P(PSTR("- Channel: 0x%X\r\n"), configuration.channel);
+        printf_P(PSTR("\r\n\r\n"));
 #endif
 
         memcpy(device_name, configuration.device_name, sizeof(device_name));

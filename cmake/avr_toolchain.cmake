@@ -284,7 +284,7 @@ endif()
 add_custom_target(
   disassemble
   ${CMAKE_OBJDUMP} -h -S ${TARGET}.elf > ${TARGET}.lst
-  DEPENDS strip
+  DEPENDS ${TARGET}.elf
   COMMENT "Disassembling ${TARGET}.elf")
 
 # Remove .hex, .map, eeprom .hex and .lst on clean
